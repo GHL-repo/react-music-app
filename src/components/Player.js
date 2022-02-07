@@ -1,12 +1,11 @@
 import React, {useState, useRef} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
-import { faStepBackward } from "@fortawesome/free-solid-svg-icons";
-import { faStepForward } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, faPause, faStepBackward, faStepForward } from "@fortawesome/free-solid-svg-icons";
 
 const Player = ({currentSong, isPlaying, setIsPlaying}) => {
-    //Ref
+    //Ref Hooks
     const audioRef = useRef(null);
+
     //Event Handlers
     const playSongHandler = () => {
         if(isPlaying){
@@ -17,24 +16,27 @@ const Player = ({currentSong, isPlaying, setIsPlaying}) => {
             setIsPlaying(true);
         };
     };
+
     const timeUpdateHandler = (e) => {
         const current = e.target.currentTime;
         const duration = e.target.duration;
         setSongInfo({...songInfo, currentTime: current, duration});
     };
+
     const getTime = (time) => {
         //Return time in human readable form 
         return(
             Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2)
         );
     };
-    const dragHandler = (e) => {
-        //console.log(e.target.value);
+
+    const barHandler = (e) => {
+        //Allows for manually updating the progress bar
         audioRef.current.currentTime = e.target.value;
         setSongInfo({...songInfo, currentTime: e.target.value});
     };
 
-    //State
+    //State Hooks
     const [songInfo, setSongInfo] = useState ({
         currentTime: 0,
         duration: 0,
@@ -50,13 +52,13 @@ const Player = ({currentSong, isPlaying, setIsPlaying}) => {
                 min={0} 
                 max={songInfo.duration} 
                 value={songInfo.currentTime} 
-                onChange={dragHandler}
+                onChange={barHandler}
             />
             <p>{getTime(songInfo.duration)}</p>
         </div>
         <div class="play-control">
             <FontAwesomeIcon className="previous" icon={faStepBackward} size="3x"/>
-            <FontAwesomeIcon onClick={playSongHandler} className="play" icon={faPlay} size="3x" />
+            <FontAwesomeIcon onClick={playSongHandler} className="play" icon={isPlaying ? faPause : faPlay } size="3x" />
             <FontAwesomeIcon className="next" icon={faStepForward} size="3x" />
         </div>
         <audio 
