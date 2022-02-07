@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import "./styles/app.scss";
-import Player from "./components/Player.js"
-import Song from "./components/Song.js"
-import data from "./data.js"
-
+import data from "./data.js";
+import Player from "./components/Player.js";
+import Song from "./components/Song.js";
+import Library from "./components/Library.js";
 
 function App() {
     //States
@@ -15,8 +15,10 @@ function App() {
         <div className="App">
             <Song currentSong={currentSong} />
             <Player isPlaying={isPlaying} setIsPlaying={setIsPlaying} currentSong={currentSong} />
+            <Library songs={songs} />
         </div>
     );
 }
+
 
 export default App;
