@@ -21,7 +21,7 @@
         width: 30%;
     }
     &:hover {
-        background: #fffcc8;
+        background-color: #b4bfdb;
     }
 }
 
@@ -50,4 +50,8 @@
       background-color: rgba(155, 155, 155, 0.7);
         border-radius: 20px;
           border: transparent;
+}
+
+.selected {
+    background: #b4bfdb;
 }

@@ -17,6 +17,12 @@ const Player = ({currentSong, isPlaying, setIsPlaying}) => {
         };
     };
 
+    const autoPlayHandler = () => {
+        if (isPlaying) {
+            audioRef.current.play();
+        }
+    }
+
     const timeUpdateHandler = (e) => {
         const current = e.target.currentTime;
         const duration = e.target.duration;
@@ -62,6 +68,7 @@ const Player = ({currentSong, isPlaying, setIsPlaying}) => {
             <FontAwesomeIcon className="next" icon={faStepForward} size="3x" />
         </div>
         <audio 
+            onLoadedData={autoPlayHandler}
             onLoadedMetadata={timeUpdateHandler}
             onTimeUpdate={timeUpdateHandler}
             ref={audioRef} 
