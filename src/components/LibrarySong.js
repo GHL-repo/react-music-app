@@ -1,6 +1,6 @@
 import React from "react";
 
-const LibrarySong = ({song, songs, setCurrentSong, currentSong, id, key}) => {
+const LibrarySong = ({song, songs, setCurrentSong, currentSong, id}) => {
     const songSelectHandler = () => {
         setCurrentSong(song);
     };
@@ -14,7 +14,7 @@ const LibrarySong = ({song, songs, setCurrentSong, currentSong, id, key}) => {
                 <h3>{song.name}</h3>
                 <h4>{song.artist}</h4>
             </div>
-      </div>  
+        </div>  
     );
 };
 
