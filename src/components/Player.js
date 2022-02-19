@@ -42,12 +42,13 @@ const Player = ({currentSong, setCurrentSong, isPlaying, setIsPlaying, songs}) =
         setSongInfo({...songInfo, currentTime: e.target.value});
     };
 
-    const skipTrackHandler = (direction) => {
+    const skipTrackHandler = async (direction) => {
         let currentIndex = songs.findIndex((song) => song.id === currentSong.id);            
         if (direction === 'skip-forward') {
-            setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+            await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
         } else if (direction === 'skip-back') {
-            (currentIndex - 1) % songs.length === -1 ? setCurrentSong(songs[songs.length - 1]) : setCurrentSong(songs[(currentIndex - 1)]);
+            (currentIndex - 1) % songs.length === -1 
+                ? await setCurrentSong(songs[songs.length - 1]) : await setCurrentSong(songs[(currentIndex - 1)]);
         } 
     };
 
@@ -80,6 +81,7 @@ const Player = ({currentSong, setCurrentSong, isPlaying, setIsPlaying, songs}) =
             onLoadedData={autoPlayHandler}
             onLoadedMetadata={timeUpdateHandler}
             onTimeUpdate={timeUpdateHandler}
+            onEnded={() => skipTrackHandler('skip-forward')} 
             ref={audioRef} 
             src={currentSong.audio}>
         </audio>
