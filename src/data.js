@@ -2,19 +2,71 @@ import { v4 as uuidv4 } from "uuid";
 function chillHop() {
   return [
     {
-      name: "Beaver Creek",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
-      artist: "Aso, Middle School, Aviino",
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=10075",
-      color: ["#205950", "#2ab3bf"],
+      name: "Looking In",
+      cover: "https://chillhop.com/wp-content/uploads/2021/08/af3ce13ad39d38057f00144f8a7c295877ccfec1-1024x1024.jpg",
+      artist: "Smile High, Teddy Roxpin",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=23335",
+      color: ["#448A92", "#D96864"],
       id: uuidv4(),
       active: true,
     },
     {
+      name: "Hypnagogia",
+      cover:"https://chillhop.com/wp-content/uploads/2020/05/16bcbe48680098798af04f176daae3693839238d-1024x1024.jpg",
+      artist: "invention_",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=10075",
+      color: ["#F597AF", "#45598E"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "New Moon",
+      cover:"https://chillhop.com/wp-content/uploads/2021/05/732128e1da8fd5f6292ffc1926a2ea840a54f4d0-1024x1024.jpg",
+      artist: "Toonorth",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=17931",
+      color: ["#3A4E6D", "#FC9E1E"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Swimming",
+      cover:"https://chillhop.com/wp-content/uploads/2020/07/25a182a6a21588b8f7ad5605ba1118a8ea61bdc2-1024x1024.jpg",
+      artist: "Sleepy Fish",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=7993",
+      color: ["#E3515C", "#1D82A8"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Be Alright",
+      cover:"https://chillhop.com/wp-content/uploads/2020/07/b2e2c1fca3e00a74402969e0a9e98d4849f38aef-1024x1024.jpg",
+      artist: "weird inside",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=1891",
+      color: ["#667659", "#C18F7C"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Mind Garden",
+      cover:"https://chillhop.com/wp-content/uploads/2020/06/fb7936b4b118678abf47e1c4bea8fca3f3b06121-1024x1024.jpg",
+      artist: "Leavy",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=8354",
+      color: ["#E49B8E", "#526C4D"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Beaver Creek",
+      cover: "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
+      artist: "Aso, Middle School, Aviino",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=10075",
+      color: ["#205950", "#2ab3bf"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
       name: "Daylight",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
+      cover: "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
       artist: "Aiguille",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9272",
       color: ["#EF8EA9", "#ab417f"],
@@ -23,8 +75,7 @@ function chillHop() {
     },
     {
       name: "Keep Going",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
+      cover: "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
       artist: "Swørn",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9222",
       color: ["#CD607D", "#c94043"],
@@ -33,8 +84,7 @@ function chillHop() {
     },
     {
       name: "Nightfall",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
+      cover: "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
       artist: "Aiguille",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9148",
       color: ["#EF8EA9", "#ab417f"],
@@ -43,8 +93,7 @@ function chillHop() {
     },
     {
       name: "Reflection",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
+      cover: "https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg",
       artist: "Swørn",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=9228",
       color: ["#CD607D", "#c94043"],
@@ -53,8 +102,7 @@ function chillHop() {
     },
     {
       name: "Under the City Stars",
-      cover:
-        "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
+      cover: "https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg",
       artist: "Aso, Middle School, Aviino",
       audio: "https://mp3.chillhop.com/serve.php/?mp3=10074",
       color: ["#205950", "#2ab3bf"],

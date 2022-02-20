@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 20rem;
+    width: 25rem;
     height: 100%;
     background: #dbd0b4;
     box-shadow: 2px 2px 10px #333; 
@@ -24,7 +24,7 @@
         width: 30%;
     }
     &:hover {
-        background-color: #b4bfdb;
+        background-color: #B4BFDB;
     }
 }
 
@@ -38,28 +38,36 @@
     }
 }
 
-* {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(155,155,155,0.5) transparent;
-}
-/* Cross-browser compatibility */
-*::-webkit-scrollbar {
-      width: 5px;
-}
-*::-webkit-scrollbar-track {
-      background: transparent;
-}
-*::-webkit-scrollbar-thumb {
-      background-color: rgba(155, 155, 155, 0.7);
-        border-radius: 20px;
-          border: transparent;
-}
-
 .selected {
-    background: #b4bfdb;
+    background-color: #b4bfdb;
 }
 
 .active-library{
     transform: translateX(0%);
     opacity: 1;
 }
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(155,155,155,0.5) transparent;
+}
+
+/* Cross-browser compatibility */
+*::-webkit-scrollbar {
+    width: 5px;
+}
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.7);
+    border-radius: 20px;
+    border: transparent;
+}
+
+@media screen and (max-width: 768px){
+    .library {
+        width: 100%;
+    }
+}
+
